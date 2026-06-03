@@ -186,12 +186,14 @@ Question: {question}
 
 
 if __name__ == "__main__":
-    test_url = "https://www.gov.wales/sustainable-communities-learning-business-case-guidance"
+    test_url = input("Enter website URL: ").strip()
+    question = input("Enter your question: ").strip()
     
-    question = "What specific templates or tools are available to download on this page?"
-    
-    print("\n--- 🚀 Starting Scraper Agent Test Session ---")
-    answer = main_chat_session(test_url, question)
-    
-    print("\n🤖 Final Answer From Groq Bot:")
-    print(answer)
+    if not test_url or not question:
+        print("Error: Both URL and Question are required to run the session.")
+    else:
+        print("\nProcessing website data and consulting LLM")
+        answer = main_chat_session(test_url, question)
+        
+        print("\nBot:")
+        print(answer)
