@@ -1,0 +1,15 @@
+# Environment Variables (Crucial Security)
+.env
+
+# Local Chroma Vector Database Data Store
+downloads/
+Agency_vectorDb/
+*.chroma/
+
+# Astral uv Cache & Tool directories
+.uv/
+uv.lock
+
+# Operating system artifacts
+.DS_Store
+Thumbs.db
